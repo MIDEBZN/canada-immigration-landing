@@ -227,7 +227,6 @@ section:nth-child(even) {
 .badge-best {
   position: absolute;
   top: -15px;
-  left: 20px;
   background: var(--whatsapp-green);
   color: white;
   padding: 5px 15px;
@@ -235,6 +234,8 @@ section:nth-child(even) {
   font-size: 14px;
   font-weight: 700;
 }
+[dir="rtl"] .badge-best { left: 20px; }
+[dir="ltr"] .badge-best { right: 20px; }
 
 .comp-header {
   display: flex;
@@ -306,19 +307,21 @@ section:nth-child(even) {
 /* How It Works Section */
 .step-container {
   position: relative;
-  padding-right: 30px;
 }
+[dir="rtl"] .step-container { padding-right: 30px; }
+[dir="ltr"] .step-container { padding-left: 30px; }
 
 .step-container::before {
   content: '';
   position: absolute;
   top: 10px;
   bottom: 10px;
-  right: 14px;
   width: 2px;
   background: var(--whatsapp-green);
   z-index: 1;
 }
+[dir="rtl"] .step-container::before { right: 14px; }
+[dir="ltr"] .step-container::before { left: 14px; }
 
 .step-item {
   position: relative;
@@ -337,7 +340,6 @@ section:nth-child(even) {
 .step-number {
   position: absolute;
   top: 20px;
-  right: -45px;
   width: 32px;
   height: 32px;
   background: var(--whatsapp-green);
@@ -350,6 +352,8 @@ section:nth-child(even) {
   z-index: 2;
   box-shadow: 0 0 0 4px var(--bg-gray);
 }
+[dir="rtl"] .step-number { right: -45px; }
+[dir="ltr"] .step-number { left: -45px; }
 
 .step-item h3 {
   font-size: 18px;
@@ -439,16 +443,30 @@ section:nth-child(even) {
 
 .msg-received {
   background: white;
+}
+[dir="rtl"] .msg-received {
   margin-left: auto;
   margin-right: 0;
   border-top-left-radius: 0;
 }
-
-.msg-sent {
-  background: #DCF8C6;
+[dir="ltr"] .msg-received {
   margin-right: auto;
   margin-left: 0;
   border-top-right-radius: 0;
+}
+
+.msg-sent {
+  background: #DCF8C6;
+}
+[dir="rtl"] .msg-sent {
+  margin-right: auto;
+  margin-left: 0;
+  border-top-right-radius: 0;
+}
+[dir="ltr"] .msg-sent {
+  margin-left: auto;
+  margin-right: 0;
+  border-top-left-radius: 0;
 }
 
 .msg-time {
