@@ -112,10 +112,18 @@ h2 {
 header {
   background-color: var(--white);
   padding: 15px 0;
-  text-align: center;
   box-shadow: var(--shadow-sm);
   position: relative;
   z-index: 10;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .logo {
@@ -124,12 +132,30 @@ header {
   color: var(--primary-blue);
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
 }
 
 .logo span {
   color: var(--whatsapp-green);
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--secondary-blue);
+  background: var(--light-blue);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.lang-switch:hover {
+  background: var(--primary-blue);
+  color: var(--white);
 }
 
 /* Sections Common */
